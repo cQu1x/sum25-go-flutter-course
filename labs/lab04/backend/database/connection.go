@@ -73,15 +73,11 @@ func InitDBWithConfig(config *Config) (*sql.DB, error) {
 
 // TODO: Implement CloseDB function
 func CloseDB(db *sql.DB) error {
-	// TODO: Properly close database connection
-	// - Check if db is not nil
-	// - Close the database connection
-	// - Return any error that occurs
 	if db == nil {
 		return errors.New("database connection is nil")
 	}
 	if err := db.Close(); err != nil {
 		return errors.New("failed to close database: " + err.Error())
 	}
-	return fmt.Errorf("TODO: implement CloseDB function")
+	return nil
 }
