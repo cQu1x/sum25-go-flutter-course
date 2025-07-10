@@ -64,12 +64,8 @@ func (u *User) Validate() error {
 	return nil
 }
 
-// TODO: Implement ValidateEmail function
-// ValidateEmail checks if email format is valid
 func ValidateEmail(email string) error {
-	// TODO: Implement email validation
-	// Use regex pattern to validate email format
-	// Email should not be empty and should match standard email pattern
+
 	email = strings.ToLower(strings.TrimSpace(email))
 	if email == "" {
 		return errors.New("email cannot be empty")
@@ -80,8 +76,6 @@ func ValidateEmail(email string) error {
 	return nil
 }
 
-// TODO: Implement ValidateName function
-// ValidateName checks if name is valid
 func ValidateName(name string) error {
 	// Name should be 2-51 characters, trimmed of whitespace
 	trimmed := strings.TrimSpace(name)
@@ -102,12 +96,8 @@ func ValidateName(name string) error {
 	return nil
 }
 
-// TODO: Implement ValidatePassword function
-// ValidatePassword checks if password meets security requirements
 func ValidatePassword(password string) error {
-	// TODO: Implement password validation
-	// Password should be at least 8 characters
-	// Should contain at least one uppercase, lowercase, and number
+
 	if password == "" {
 		return errors.New("password cannot be empty")
 	}
